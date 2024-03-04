@@ -181,27 +181,27 @@
 // functions do one thing
 //objects
 
-const myObj = {
-	name: 'Vinay',
-};
+// const myObj = {
+// 	name: 'Vinay',
+// };
 
-const person = {
-	alive: true,
-	answer: 37,
-	hobbies: ['Training', 'Sleep', 'coding'],
-	beverage: {
-		morning: 'Coffee',
-		afternoon: 'GreenTea',
-	},
-	action: function () {
-		return `Time for ${this.beverage.morning}`;
-	},
-	action2() {
-		return `Time for afternoon ${this.beverage.afternoon}`;
-	},
-};
+// const person = {
+// 	alive: true,
+// 	answer: 37,
+// 	hobbies: ['Training', 'Sleep', 'coding'],
+// 	beverage: {
+// 		morning: 'Coffee',
+// 		afternoon: 'GreenTea',
+// 	},
+// 	action: function () {
+// 		return `Time for ${this.beverage.morning}`;
+// 	},
+// 	action2() {
+// 		return `Time for afternoon ${this.beverage.afternoon}`;
+// 	},
+// };
 
-console.log(person.hasOwnProperty("alive"));
+// console.log(person.hasOwnProperty('alive'));
 
 // console.log(myObj.name);
 // console.log(anotherObj.hobbies);
@@ -221,4 +221,48 @@ console.log(person.hasOwnProperty("alive"));
 // console.log(vinay.action2());
 // console.log(vinay);
 
+// Fetch API requires a discussion of
+// Callbacks, Promises, Thenables, and Async/Await
+// Promises
+// 3 states: Pending, Fulfilled, Rejected
 
+// const promise = new Promise((resolve, reject) => {
+// 	let error = false;
+// 	if (!error) {
+// 		resolve('Yes! resolved promise');
+// 	} else {
+// 		reject('No! rejected promise');
+// 	}
+// });
+// console.log(promise);
+
+// promise
+// 	.then((value) => value + 1)
+// 	.then((newValue) => console.log(`Promise is ${newValue}`))
+// 	.catch((error) => console.log(error)).finally((value) => console.log("Value hum"));
+
+// const myNextPromise = new Promise((resolve, reject) => {
+// 	setTimeout(() => resolve('myNextPromise Resolved!'), 3000);
+// });
+
+// myNextPromise.then(value => console.log(value));
+// promise.then(value => console.log(value));
+
+// const users = fetch('https://jsonplaceholder.typicode.com/users')
+// 	.then((response) => response.json())
+// 	.then((data) => {
+// 		data.forEach((user) => {
+// 			console.log(user);
+// 		});
+// 	}).catch((error) => console.log(error));
+
+// console.log(users);
+
+// Async / Await
+
+const myCoolFunc = async () => {
+	const response = await fetch('https://jsonplaceholder.typicode.com/users');
+	const jsonUserData = await response.json();
+	console.log(jsonUserData.map((user) => user.email));
+};
+myCoolFunc();
