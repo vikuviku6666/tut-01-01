@@ -1,4 +1,4 @@
-const isPalindrome = require('./isPalindrome');
+import isPalindrome from './isPalindrome.mjs';
 
 test('Tacocat returen true', () => {
   expect(isPalindrome("Tacocat")).toBe(true)

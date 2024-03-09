@@ -1,9 +1,11 @@
 {
-  "name": "tut-01-01",
+  "name": "js-docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node ./index.mjs",
     "test": "jest --coverage"
   },
   "keywords": [],

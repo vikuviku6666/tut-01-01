@@ -260,9 +260,94 @@
 
 // Async / Await
 
-const myCoolFunc = async () => {
-	const response = await fetch('https://jsonplaceholder.typicode.com/users');
-	const jsonUserData = await response.json();
-	console.log(jsonUserData.map((user) => user.email));
-};
-myCoolFunc();
+// const myCoolFunc = async () => {
+// 	const response = await fetch('https://jsonplaceholder.typicode.com/users');
+// 	const jsonUserData = await response.json();
+// 	console.log(jsonUserData.map((user) => user.email));
+// };
+// myCoolFunc();
+
+// JavaScript is High-Level, Garbage-collected, interpreted or just-in-time complied,
+// multi-paradigm, prototype-based object oriented, First-class function, Dynamic, single-threaded, non-blocking event loop
+// const hi = "hi too";
+// const scope = () => {
+// 	if (hi === "") {
+// 		const vin = "vin";
+// 		console.log(vin);
+// 	}
+// 	const bin = "easy";
+// 	console.log(bin);
+// 	console.log(hi);
+// }
+
+// scope();
+// function hiToo() {
+// 	const myName = 'Jonas';
+// 	const job2 = "Developer";
+	
+// 	if (myName === 'Jonas') {
+// 		console.log(job2);
+// 	}
+// 	console.log(this);
+// }
+
+// hiToo();
+// console.log("Hello Vinay Learning OOP in Javascript");
+
+// const calc = () => {
+// 	return 4 * 4;
+// }
+
+// const printCalc = (callback) => {
+// 	console.log(callback());
+// }
+// printCalc(calc);
+
+/**
+ * Creates a new Car
+ * @property {Number} doors - Number of Car Doors
+ * @property {String} engine - Car Engine Modal
+ * @property {String} color - Car Color
+ * @property {string} luxury - Car Luxury type
+ * @method addLuxury {Function} - Add Luxury type
+ * @method getLuxury {Function} - Get Luxury
+ */
+export class Car {
+	doors;
+	engine;
+	color;
+	#luxury;
+	constructor(doors, engine, color) {
+		this.doors = doors;
+		this.engine = engine;
+		this.color = color;
+	}
+
+	addLuxury(lux) {
+		this.#luxury = lux;
+	}
+
+	getLuxury() {
+		return this.#luxury;
+	}
+}
+
+class elCar extends Car {
+	constructor(doors, engine, color, wheels=4) {
+		super(doors, engine, color);
+		this.wheels = wheels;
+	}
+}
+
+
+const greenCar = new Car(4, "ultra", "green");
+const cx5 = new elCar(4, "Enviro-friendly", "cyan", 8);
+cx5.addLuxury("Leather");
+console.log("Luxury:======<>", cx5.getLuxury());
+const cx4 = new elCar(4, "Enviro-friendly", "cyan");
+
+
+console.log(greenCar);
+console.log(cx5);
+console.log(cx4);
+
