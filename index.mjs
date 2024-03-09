@@ -303,51 +303,51 @@
 // }
 // printCalc(calc);
 
-/**
- * Creates a new Car
- * @property {Number} doors - Number of Car Doors
- * @property {String} engine - Car Engine Modal
- * @property {String} color - Car Color
- * @property {string} luxury - Car Luxury type
- * @method addLuxury {Function} - Add Luxury type
- * @method getLuxury {Function} - Get Luxury
- */
-export class Car {
-	doors;
-	engine;
-	color;
-	#luxury;
-	constructor(doors, engine, color) {
-		this.doors = doors;
-		this.engine = engine;
-		this.color = color;
-	}
+// /**
+//  * Creates a new Car
+//  * @property {Number} doors - Number of Car Doors
+//  * @property {String} engine - Car Engine Modal
+//  * @property {String} color - Car Color
+//  * @property {string} luxury - Car Luxury type
+//  * @method addLuxury {Function} - Add Luxury type
+//  * @method getLuxury {Function} - Get Luxury
+//  */
+// export class Car {
+// 	doors;
+// 	engine;
+// 	color;
+// 	#luxury;
+// 	constructor(doors, engine, color) {
+// 		this.doors = doors;
+// 		this.engine = engine;
+// 		this.color = color;
+// 	}
 
-	addLuxury(lux) {
-		this.#luxury = lux;
-	}
+// 	addLuxury(lux) {
+// 		this.#luxury = lux;
+// 	}
 
-	getLuxury() {
-		return this.#luxury;
-	}
-}
+// 	getLuxury() {
+// 		return this.#luxury;
+// 	}
+// }
 
-class elCar extends Car {
-	constructor(doors, engine, color, wheels=4) {
-		super(doors, engine, color);
-		this.wheels = wheels;
-	}
-}
-
-
-const greenCar = new Car(4, "ultra", "green");
-const cx5 = new elCar(4, "Enviro-friendly", "cyan", 8);
-cx5.addLuxury("Leather");
-console.log("Luxury:======<>", cx5.getLuxury());
-const cx4 = new elCar(4, "Enviro-friendly", "cyan");
+// class elCar extends Car {
+// 	constructor(doors, engine, color, wheels=4) {
+// 		super(doors, engine, color);
+// 		this.wheels = wheels;
+// 	}
+// }
 
 
-console.log(greenCar);
-console.log(cx5);
-console.log(cx4);
+// const greenCar = new Car(4, "ultra", "green");
+// const cx5 = new elCar(4, "Enviro-friendly", "cyan", 8);
+// cx5.addLuxury("Leather");
+// console.log("Luxury:======<>", cx5.getLuxury());
+// const cx4 = new elCar(4, "Enviro-friendly", "cyan");
+
+
+// console.log(greenCar);
+// console.log(cx5);
+// console.log(cx4);
 
